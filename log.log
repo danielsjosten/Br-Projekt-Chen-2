@@ -1,0 +1,9 @@
+apr 19, 2017 3:23:26 EM other.TestOther setUpBeforeClass
+INFO: @BeforeClass - setUpBeforeClass()
+
+apr 19, 2017 3:23:37 EM other.TestOther setUp
+INFO: @Before - setUp()
+
+apr 19, 2017 3:23:40 EM other.TestOther tearDownAfterClass
+INFO: @AfterClass - tearDownAfterClass()
+
