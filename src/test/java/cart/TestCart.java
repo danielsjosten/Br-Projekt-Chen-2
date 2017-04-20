@@ -76,7 +76,7 @@ public class TestCart {
 //			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("header-text")));
 //			Assert.assertEquals("https://www.br.se/", driver.getCurrentUrl());
 //			
-//			//Vänta och klicka på produkt
+//			//Vänta och klicka på lägg produkt i varukorgen
 //			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='content']/div[4]/div/div/ul/li[2]/div/a")));
 //			String productName = driver.findElement(By.xpath(".//*[@id='content']/div[4]/div/div/ul/li[2]/div/div/a/div[3]/span")).getText();
 //			System.out.println(productName);
@@ -125,7 +125,7 @@ public class TestCart {
 //			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("header-text")));
 //			Assert.assertEquals("https://www.br.se/", driver.getCurrentUrl());
 //			
-//			//Vänta och klicka på produkt
+//			//Vänta och klicka på lägg produkt i varukorgen
 //			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='content']/div[4]/div/div/ul/li[2]/div/a")));
 //			String productName = driver.findElement(By.xpath(".//*[@id='content']/div[4]/div/div/ul/li[2]/div/div/a/div[3]/span")).getText();
 //			System.out.println(productName);
@@ -180,7 +180,7 @@ public class TestCart {
 //			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("header-text")));
 //			Assert.assertEquals("https://www.br.se/", driver.getCurrentUrl());
 //			
-//			//Vänta och klicka på produkt
+//			//Vänta och klicka på lägg produkt i varukorgen
 //			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='content']/div[4]/div/div/ul/li[2]/div/a")));
 //			String productName = driver.findElement(By.xpath(".//*[@id='content']/div[4]/div/div/ul/li[2]/div/div/a/div[3]/span")).getText();
 //			System.out.println(productName);
@@ -243,11 +243,16 @@ public class TestCart {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("header-text")));
 			Assert.assertEquals("https://www.br.se/", driver.getCurrentUrl());
 			
-			//Vänta och klicka på produkt
+			//Vänta och klicka på lägg produkt i varukorgen
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='content']/div[4]/div/div/ul/li[2]/div/a")));
-			String productName = driver.findElement(By.xpath(".//*[@id='content']/div[4]/div/div/ul/li[2]/div/div/a/div[3]/span")).getText();
-			System.out.println(productName);
+			String firstProductName = driver.findElement(By.xpath(".//*[@id='content']/div[4]/div/div/ul/li[2]/div/div/a/div[3]/span")).getText();
+			System.out.println(firstProductName);
 			driver.findElement(By.xpath(".//*[@id='content']/div[4]/div/div/ul/li[2]/div/a")).click();
+			
+			//Lägg in en till produkt i varukorgen
+			String secondProductName = driver.findElement(By.xpath(".//*[@id='content']/div[4]/div/div/ul/li[3]/div/div/a/div[3]/span")).getText();
+			System.out.println(secondProductName);
+			driver.findElement(By.xpath(".//*[@id='content']/div[4]/div/div/ul/li[3]/div/a")).click();
 			
 			//Vänta på att varukorgsknappen dyker upp
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(.//*[@class='icon'])[6]")));
@@ -258,10 +263,10 @@ public class TestCart {
 			
 			//Vänta på att produkten dyker upp i varukorgen
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='basket']/div[2]/div/table/tbody/tr/td[1]/img")));
-			String cartProductName = driver.findElement(By.xpath(".//*[@class='desc']/h3")).getText();
+			String firstCartProductName = driver.findElement(By.xpath(".//*[@class='desc']/h3")).getText();
 			
 			//Verifiera att rätt produkt lags till i varukorgen
-			Assert.assertEquals(productName.toUpperCase(), cartProductName.toUpperCase());
+			Assert.assertEquals(firstProductName.toUpperCase(), firstCartProductName.toUpperCase());
 			
 			//Verifiera att antalet av produkten är 1 i varukorgen
 			String cartValue = driver.findElement(By.xpath(".//*[@id='b_quantity_1']")).getAttribute("value");
