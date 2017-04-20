@@ -1,9 +1,9 @@
-apr 20, 2017 9:29:39 FM other.TestOther setUpBeforeClass
+apr 20, 2017 10:34:21 FM cart.TestCart setUpBeforeClass
 INFO: @BeforeClass - setUpBeforeClass()
 
-apr 20, 2017 9:29:54 FM other.TestOther setUp
+apr 20, 2017 10:34:31 FM cart.TestCart setUp
 INFO: @Before - setUp()
 
-apr 20, 2017 9:29:58 FM other.TestOther tearDownAfterClass
+apr 20, 2017 10:34:36 FM cart.TestCart tearDownAfterClass
 INFO: @AfterClass - tearDownAfterClass()
 
