@@ -1,1 +1,6 @@
-BR_Projekt_Chen_2\BR_Projekt_Chen_2\AppTest.class
+payment\TestPayment.class
+customer\TestCustomer.class
+searchFunction\TestSearchFunction.class
+cart\TestCart.class
+other\TestOther.class
+product\TestProduct.class
