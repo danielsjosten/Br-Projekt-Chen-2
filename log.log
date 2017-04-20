@@ -1,9 +1,18 @@
-apr 20, 2017 1:22:25 EM cart.TestCart setUpBeforeClass
+apr 20, 2017 2:28:00 EM cart.TestCart setUpBeforeClass
 INFO: @BeforeClass - setUpBeforeClass()
 
-apr 20, 2017 1:22:35 EM cart.TestCart setUp
+apr 20, 2017 2:28:10 EM cart.TestCart setUp
 INFO: @Before - setUp()
 
-apr 20, 2017 1:22:43 EM cart.TestCart tearDownAfterClass
+apr 20, 2017 2:28:28 EM cart.TestCart setUp
+INFO: @Before - setUp()
+
+apr 20, 2017 2:28:43 EM cart.TestCart setUp
+INFO: @Before - setUp()
+
+apr 20, 2017 2:29:00 EM cart.TestCart setUp
+INFO: @Before - setUp()
+
+apr 20, 2017 2:29:08 EM cart.TestCart tearDownAfterClass
 INFO: @AfterClass - tearDownAfterClass()
 
