@@ -16,7 +16,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 import junit.framework.ComparisonFailure;
 import other.TestOther;
 
