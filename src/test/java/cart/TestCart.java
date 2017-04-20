@@ -20,10 +20,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+<<<<<<< HEAD
 import org.junit.Assert;
 
 import org.junit.ComparisonFailure;
 
+=======
+import org.junit.*;
+import junit.framework.ComparisonFailure;
+import other.TestOther;
+>>>>>>> saer_branch
 
 public class TestCart {
 
