@@ -21,13 +21,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import org.junit.Assert;
-<<<<<<< HEAD
-import junit.framework.ComparisonFailure;
-import other.TestOther;
-=======
+
 import org.junit.ComparisonFailure;
 
->>>>>>> daniel_branch
 
 public class TestCart {
 
