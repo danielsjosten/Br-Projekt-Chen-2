@@ -16,10 +16,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.NoSuchElementException;
 
-<<<<<<< HEAD
-=======
-//import junit.framework.Assert;
->>>>>>> mattias_branch
+
 import org.junit.Assert;
 
 
