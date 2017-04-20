@@ -14,8 +14,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.NoSuchElementException;
 
-import junit.framework.Assert;
+//import junit.framework.Assert;
+import org.junit.Assert;
 
 
 public class TestOther {
@@ -85,10 +87,10 @@ public class TestOther {
 //		catch (ComparisonFailure e) {
 //			log.info(e.getMessage());
 //			Assert.fail("Assert equals not matching");
-//		}catch (NoSuchElementException e) {
-//			log.info(e.getMessage());
-//			Assert.fail("No such element");
-//		}
+		catch (NoSuchElementException e) {
+			log.info(e.getMessage());
+			Assert.fail("No such element");
+		}
 		catch (AssertionError e) {
 			log.info(e.getMessage());
 			Assert.fail("No such element");
