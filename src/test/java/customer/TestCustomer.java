@@ -78,6 +78,7 @@ public class TestCustomer {
 	@Test
 	public void testCustomerInformationChange() {
 		try{
+			
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("header-text")));
 		Assert.assertEquals("https://www.br.se/", driver.getCurrentUrl());
 		
@@ -86,13 +87,11 @@ public class TestCustomer {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("html/body/div[8]/div[2]/div[2]/div/div[2]/form/div[3]/button")));
 		Assert.assertEquals("https://www.br.se/login",driver.getCurrentUrl());
 		
-	//	driver.findElement(By.id("j_username")).click();
 		
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("document.getElementById('j_username').value='hej@live.se';");
 		executor.executeScript("document.getElementById('j_password').value='123456';");	
 		
-		//driver.findElement(By.xpath("html/body/div[8]/div[2]/div[2]/div/div[2]/form/div[2]/div/input")).sendKeys("123456");	
 		driver.findElement(By.xpath("html/body/div[8]/div[2]/div[2]/div/div[2]/form/div[3]/button")).click();
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("html/body/div[8]/div[3]/div/a[2]")));
@@ -114,11 +113,6 @@ public class TestCustomer {
 		
 		Assert.assertTrue(text.contains("Hanna"));
 		
-		//String td1 = rows.get(0).getText();
-		//String td2 = rows.get(1).getText();
-		
-		//Assert.assertEquals("Förnamn:",td1);
-		//Assert.assertEquals("Hanna",td2);
 		
 		}
 		catch(NoSuchElementException e){
@@ -144,8 +138,6 @@ public class TestCustomer {
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@class='btn btn-default btn-block']")));
 				Assert.assertEquals("https://www.br.se/login", driver.getCurrentUrl());
 				
-				//driver.findElement(By.id("register.firstName")).click();
-				//driver.findElement(By.id("register.firstName")).sendKeys("Test");
 				
 				JavascriptExecutor executor = (JavascriptExecutor)driver;
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("register.firstName")));
