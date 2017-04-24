@@ -79,9 +79,14 @@ public class TestPayment {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("header-text")));
 		Assert.assertEquals("https://www.br.se/", driver.getCurrentUrl());
 		
-		//Väntar på att en viss produkt dyker upp sen Lägger till den i varukorgen
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("html/body/div[6]/div[2]/div[4]/div/div/ul/li[2]/div/a")));
-		driver.findElement(By.xpath("html/body/div[6]/div[2]/div[4]/div/div/ul/li[2]/div/a")).click();
+		//Väntar på att bannern för sortimentet dyker upp sen klicka på den för att komma till produkter
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@class='frontpage-banner-img']")));
+		driver.findElement(By.xpath(".//*[@class='frontpage-banner-img']")).click();
+		
+		//Vänta tills en viss knapp syns sen lägg till en produkt till varukorg
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("html/body/div[8]/div[2]/div[5]/div[3]/button")));
+		driver.findElement(By.xpath("html/body/div[8]/div[2]/div[5]/div[2]/div/ul/li[1]/div/a")).click();
+		
 		
 		//Väntar tills varukorgen finns sen klicka på den
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(.//*[@class='icon'])[6]")));
@@ -94,11 +99,11 @@ public class TestPayment {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(.//*[@class='btn action js-once btn-once'])[2]")));
 		driver.findElement(By.xpath("(.//*[@class='btn action js-once btn-once'])[2]")).click();
 		
-		//Vänta tills fältet Epostadress finns och Bekräfta att man är på rätt sida
+		//Vänta tills fältet Epostadress finns och verifiera att man är på rätt sida
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("guest.email")));
 		Assert.assertEquals("https://www.br.se/login/checkout", driver.getCurrentUrl());
 		
-		//Fyll i fältet epost och bekräfta mejladress
+		//Fyll i fältet epost och verifiera mejladress
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("document.getElementById('guest.email').value='hhh@live.se';");
 		executor.executeScript("document.getElementById('guest.emailConfirm').value='hhh@live.se';");
@@ -106,19 +111,19 @@ public class TestPayment {
 		//Klicka på knappen fortsätt till kassan som gäst
 		driver.findElement(By.xpath("(.//*[@class='btn btn-default btn-block'])[1]")).click();
 		
-		//Bekräfta att man är på rätt sida och ser rätt header
+		//verifiera att man är på rätt sida och ser rätt header
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@class='header_text']")));
 		Assert.assertEquals("https://www.br.se/checkout/multi/your-information", driver.getCurrentUrl());
 		
-		//Bekräfta att knappen för betalkort finns och den är selectad
+		//verifiera att knappen för betalkort finns och den är selectad
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("brSe-creditcard")));
 		Assert.assertTrue(driver.findElement(By.id("brSe-creditcard")).isSelected());
 		
-		//Klicka på knappen banköverföring och bekräfta att den är selectad
+		//Klicka på knappen banköverföring och verifiera att den är selectad
 		driver.findElement(By.id("brSe-bank")).click();
 		Assert.assertTrue(driver.findElement(By.id("brSe-bank")).isSelected());
 		
-		//Klicka på knappen faktura och bekräfta att den är selectad
+		//Klicka på knappen faktura och verifiera att den är selectad
 		driver.findElement(By.id("brSe-onlineinvoice")).click();
 		Assert.assertTrue(driver.findElement(By.id("brSe-onlineinvoice")).isSelected());
 	}

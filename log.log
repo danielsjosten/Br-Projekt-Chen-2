@@ -1,0 +1,18 @@
+apr 25, 2017 12:00:37 FM cart.TestCart setUpBeforeClass
+INFO: Starting testCart tests!
+apr 25, 2017 12:00:56 FM cart.TestCart testVerifyPriceInCartWithMultipleProducts
+INFO: Failed to decode response from marionette
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'ADMIN-HP', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Admin\AppData\Local\Temp\rust_mozprofile.rqOprXjp0eys, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0, platformVersion=10.0, moz:processID=15308, browserName=firefox, platformName=windows_nt}]
+Session ID: 84ae34ab-3c51-47a5-9db2-8e5acec6c98f
+*** Element info: {Using=xpath, value=.//*[@id='basket']/div[2]/div/table/tbody/tr/td[1]/img}
+apr 25, 2017 12:01:17 FM cart.TestCart testDecreaseQuantityAndVerifyResult
+INFO: Failed to decode response from marionette
+Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+System info: host: 'ADMIN-HP', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_51'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Admin\AppData\Local\Temp\rust_mozprofile.M6QRduZjJDZs, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0, platformVersion=10.0, moz:processID=1352, browserName=firefox, platformName=windows_nt}]
+Session ID: 9da0c40a-cd1e-4274-87cf-22263724b4fd
+*** Element info: {Using=xpath, value=.//*[@id='giftfinder-container']/div/div/div/ul/li[1]/div/a}
