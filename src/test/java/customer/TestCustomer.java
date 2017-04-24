@@ -1,30 +1,25 @@
 package customer;
 
-import static org.junit.Assert.*;
-
-import java.util.List;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+import inputs.LoginInput;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
+import pageObject.HomePage;
+import pageObject.LoginPage;
 
-import other.TestOther;
 
 public class TestCustomer {
 
@@ -33,12 +28,12 @@ public class TestCustomer {
 	private static FileHandler fh;
 	private static Logger log;
 	
-	private static String url = "http://www.br.se";
+	private static String url = "https://www.br.se/";
 	
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		log = Logger.getLogger(TestOther.class.getName());
+		log = Logger.getLogger(TestCustomer.class.getName());
 		
 		try {
 			fh = new FileHandler("log.log");
@@ -178,6 +173,7 @@ public class TestCustomer {
 				
 				
 			}
+
 			catch(NoSuchElementException e){
 				log.info(e.getMessage());
 				Assert.fail("No such element");
@@ -187,5 +183,48 @@ public class TestCustomer {
 				Assert.fail("Assertion fail");
 			}
 	}
+	@Test
+	public void testLoginWrongPassword() throws Exception {
+		try {
 
+			// Instans of my page objects
+			HomePage homePage = new HomePage();
+			LoginPage loginPage = new LoginPage();
+			LoginInput loginInput = new LoginInput();
+
+			wait.until(ExpectedConditions.visibilityOf(homePage.newsletterButton(driver)));
+			Assert.assertEquals(url, driver.getCurrentUrl());
+
+			// Click on loginButton on homepage
+			homePage.loginButton(driver).click();
+
+			// I try to get page object to work with .visibilityOf but i hade to use visibilityOfAllElementsLocatedBy to make it work
+			// It could be something i miss or .visibilityOf is broken in selenium lib
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(".//*[@class=\"headline\"]/h2")));
+			wait.until(ExpectedConditions.visibilityOf(loginPage.comebackHeadline(driver)));
+			// Assert that you get this message to verify that you or on login page
+			Assert.assertEquals("Återvändande kund", loginPage.comebackHeadline(driver).getText());
+
+			// Send login data to input fields
+			loginPage.usernameInput(driver).sendKeys(loginInput.username);
+			loginPage.usernameInput(driver).sendKeys(loginInput.wrongPassword);
+			loginPage.loginButton(driver).click();
+
+			// Wait for alert message to show that you use wrong login data
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@class=\"alert alert-danger alert-dismissable\"]")));
+			wait.until(ExpectedConditions.visibilityOf(loginPage.alert(driver)));
+			String Alert = loginPage.alert(driver).getText();
+
+			// Assert that you right message show
+			Assert.assertEquals("× Kontot hittades inte", Alert );
+
+
+		} catch (NoSuchElementException e) {
+			log.info(e.getMessage());
+			Assert.fail("No such element");
+		} catch (AssertionError e) {
+			log.info(e.getMessage());
+			Assert.fail("Assertion fail");
+		}
+	}
 }

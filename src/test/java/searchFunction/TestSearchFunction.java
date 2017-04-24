@@ -1,31 +1,40 @@
 package searchFunction;
 
-import static org.junit.Assert.*;
-
+import com.beust.jcommander.Parameters;
 import org.junit.*;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+/**
+ * The Class SampleSuite1.
+ *
+ * @author Reid McPherson
+ */
+
 public class TestSearchFunction {
-    private static WebDriver driver;
+
     private static WebDriverWait wait;
     private static FileHandler fh;
     private static Logger log;
 
     private static String url = "http://www.br.se";
+
+    private static WebDriver driver;
+
 
     @BeforeClass
     public static void setUpBeforeClass() throws Exception {
@@ -43,7 +52,8 @@ public class TestSearchFunction {
 
     @Before
     public void setUp() throws Exception {
-        driver = new FirefoxDriver();
+
+        driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 3000);
         driver.get(url);
         log.info("@Before - setUp()\n");
@@ -73,14 +83,14 @@ public class TestSearchFunction {
             Assert.assertEquals("https://www.br.se/", driver.getCurrentUrl());
 
             // Array of item to search for
-            String [] searchItem = {"lego", "godis", "kalle"};
+            String [] searchItem = {"lego", "hello", "trolls"};
             // Random for take out one of the item from searchItem array list
             int rnd = new Random().nextInt(searchItem.length);
 
             // Send the random product to searchfield
             driver.findElement(By.id("js-site-search-input")).sendKeys(searchItem[rnd]);
 
-            // Split the random pickt item into separated letters in a array to
+            // Split the random picked item into separated letters in a array to
             // This because search alternative will give you alternative that include all individual letters we search on
             String splitItem [] = searchItem[rnd].split("");
 
@@ -96,6 +106,8 @@ public class TestSearchFunction {
                 String searchTextLowC = searchText.toLowerCase();
                 // Loop trow every letter in search item
                 for (int i = 0; i < splitItem.length; i++){
+                    System.out.println(splitItem[i]);
+                    System.out.println(searchTextLowC);
                     // assert if letter exist in search alternative
                     Assert.assertTrue(searchTextLowC.contains(splitItem[i]));
                 }

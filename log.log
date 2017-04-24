@@ -1,1 +1,9 @@
+apr 24, 2017 11:14:49 EM product.TestProduct setUpBeforeClass
+INFO: @BeforeClass - setUpBeforeClass()
+
+apr 24, 2017 11:15:05 EM product.TestProduct setUp
+INFO: @Before - setUp()
+
+apr 24, 2017 11:15:16 EM product.TestProduct tearDownAfterClass
+INFO: @AfterClass - tearDownAfterClass()
 

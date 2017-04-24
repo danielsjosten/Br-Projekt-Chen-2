@@ -31,7 +31,7 @@ public class TestCart {
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		log = Logger.getLogger(TestOther.class.getName());
+		log = Logger.getLogger(TestCart.class.getName());
 		
 		try {
 			fh = new FileHandler("log.log");
