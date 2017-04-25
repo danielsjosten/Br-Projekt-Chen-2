@@ -16,7 +16,9 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -69,6 +71,7 @@ public class TestCart {
 
 	@AfterClass
 	public static void tearDownAfterClass() {
+		log.info("All tests finished!");
 		fh.close();
 	}
 
@@ -262,6 +265,7 @@ public class TestCart {
 			Assert.fail("Webdriver Exception!");
 		}
 	}
+
 
 	@Test
 	public void testVerifyPriceInCartWithMultipleProducts() throws InterruptedException {
