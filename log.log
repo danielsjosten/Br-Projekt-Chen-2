@@ -1,1 +1,9 @@
+apr 25, 2017 10:16:32 EM searchFunction.TestSearchFunction setUpBeforeClass
+INFO: @BeforeClass - setUpBeforeClass()
+
+apr 25, 2017 10:16:41 EM searchFunction.TestSearchFunction setUp
+INFO: @Before - setUp()
+
+apr 25, 2017 10:16:44 EM searchFunction.TestSearchFunction tearDownAfterClass
+INFO: @AfterClass - tearDownAfterClass()
 

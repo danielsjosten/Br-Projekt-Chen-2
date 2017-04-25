@@ -51,6 +51,7 @@ public class TestSearchFunction {
     @Before
     public void setUp() throws Exception {
 
+        // use chrome for this one
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 3000);
         driver.get(url);
@@ -81,16 +82,16 @@ public class TestSearchFunction {
             Assert.assertEquals("https://www.br.se/", driver.getCurrentUrl());
 
             // Array of item to search for
-            String [] searchItem = {"lego", "hello", "trolls"};
+            String [] searchItems = {"lego", "hello", "trolls"};
             // Random for take out one of the item from searchItem array list
-            int rnd = new Random().nextInt(searchItem.length);
+            int rnd = new Random().nextInt(searchItems.length);
 
             // Send the random product to searchfield
-            driver.findElement(By.id("js-site-search-input")).sendKeys(searchItem[rnd]);
+            driver.findElement(By.id("js-site-search-input")).sendKeys(searchItems[rnd]);
 
             // Split the random picked item into separated letters in a array to
             // This because search alternative will give you alternative that include all individual letters we search on
-            String splitItem [] = searchItem[rnd].split("");
+            String splitItem [] = searchItems[rnd].split("");
 
 
             Thread.sleep(3000);
