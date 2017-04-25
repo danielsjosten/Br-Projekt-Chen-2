@@ -1,4 +1,4 @@
-apr 25, 2017 3:20:45 EM cart.TestCart setUpBeforeClass
+apr 25, 2017 3:50:11 EM cart.TestCart setUpBeforeClass
 INFO: Starting testCart tests!
-apr 25, 2017 3:20:57 EM cart.TestCart tearDownAfterClass
+apr 25, 2017 3:51:25 EM cart.TestCart tearDownAfterClass
 INFO: All tests finished!
