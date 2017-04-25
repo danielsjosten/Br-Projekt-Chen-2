@@ -1,9 +1,18 @@
-apr 24, 2017 11:14:49 EM product.TestProduct setUpBeforeClass
+apr 25, 2017 9:17:32 EM customer.TestCustomer setUpBeforeClass
 INFO: @BeforeClass - setUpBeforeClass()
 
-apr 24, 2017 11:15:05 EM product.TestProduct setUp
+apr 25, 2017 9:17:47 EM customer.TestCustomer setUp
 INFO: @Before - setUp()
 
-apr 24, 2017 11:15:16 EM product.TestProduct tearDownAfterClass
+apr 25, 2017 9:17:48 EM customer.TestCustomer testLoginWrongPassword
+INFO: Unable to locate element: .//*[@class="headline"]/h2
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'Mattiass-MBP-3', ip: '192.168.1.7', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=/var/folders/qq/zv17p9k52rn7_wwtgkd9ypw80000gn/T/rust_mozprofile.EH6ggKU4DXkd, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=53.0, platformVersion=14.5.0, moz:processID=2092.0, browserName=firefox, javascriptEnabled=true, platformName=darwin}]
+Session ID: 924953c4-b280-4e4c-b3c1-07038e530373
+*** Element info: {Using=xpath, value=.//*[@class="headline"]/h2}
+apr 25, 2017 9:17:49 EM customer.TestCustomer tearDownAfterClass
 INFO: @AfterClass - tearDownAfterClass()
 

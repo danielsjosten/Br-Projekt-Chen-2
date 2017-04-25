@@ -183,6 +183,11 @@ public class TestCustomer {
 				Assert.fail("Assertion fail");
 			}
 	}
+
+
+	/**
+	 * Created by mattiassvensson on 2017-04-24.
+	 */
 	@Test
 	public void testLoginWrongPassword() throws Exception {
 		try {
@@ -207,7 +212,7 @@ public class TestCustomer {
 
 			// Send login data to input fields
 			loginPage.usernameInput(driver).sendKeys(loginInput.username);
-			loginPage.usernameInput(driver).sendKeys(loginInput.wrongPassword);
+			loginPage.passwordInput(driver).sendKeys(loginInput.wrongPassword);
 			loginPage.loginButton(driver).click();
 
 			// Wait for alert message to show that you use wrong login data

@@ -1,9 +1,14 @@
 package pageObject;
 
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+/**
+ * Created by mattiassvensson on 2017-04-24.
+ */
 
 public class HomePage {
 

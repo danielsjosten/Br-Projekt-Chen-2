@@ -20,9 +20,7 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 /**
- * The Class SampleSuite1.
- *
- * @author Reid McPherson
+ * Created by mattiassvensson on 2017-04-24.
  */
 
 public class TestSearchFunction {

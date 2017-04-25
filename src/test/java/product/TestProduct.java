@@ -15,6 +15,10 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+/**
+ * Created by mattiassvensson on 2017-04-24.
+ */
+
 public class TestProduct {
 
 	private static WebDriver driver;
@@ -48,9 +52,8 @@ public class TestProduct {
 
 	@After
 	public void tearDown() throws Exception {
-		// driver.close();
-
-		//driver.quit();
+		driver.close();
+		driver.quit();
 
 	}
 
