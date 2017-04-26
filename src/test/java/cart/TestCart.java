@@ -1,5 +1,7 @@
 package cart;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
@@ -35,6 +37,7 @@ public class TestCart {
 	private static WebDriverWait wait;
 	private static FileHandler fh;
 	private static Logger log;
+	private static Robot robot;
 
 	private static String url = "http://www.br.se";
 
@@ -62,6 +65,8 @@ public class TestCart {
 		wait = new WebDriverWait(driver, 3000);
 		driver.manage().window().maximize();
 		driver.get(url);
+		robot = new Robot();
+
 	}
 
 	@After
@@ -95,10 +100,15 @@ public class TestCart {
 			System.out.println(productName);
 			//Klicka på lägg i varukorg
 			driver.findElement(By.xpath(".//*[@id='giftfinder-container']/div/div/div/ul/li[1]/div/a")).click();
-//
+
+			
+			Thread.sleep(1000);
+			robot.keyPress(KeyEvent.VK_PAGE_UP);
+			robot.keyRelease(KeyEvent.VK_PAGE_UP);
+			
 //			// Vänta på att varukorgsknappen dyker upp
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@class='basket active']")));
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@class='basket active']")));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(.//*[@class='basket active'])[1]")));
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//*[@class='basket active'])[1]")));
 			Thread.sleep(500);
 //
 //			// Klicka på varukorgsknappen
@@ -151,10 +161,15 @@ public class TestCart {
 					.getText();
 			System.out.println(productName);
 			driver.findElement(By.xpath(".//*[@id='giftfinder-container']/div/div/div/ul/li[1]/div/a")).click();
+			
+			Thread.sleep(1000);
+			robot.keyPress(KeyEvent.VK_PAGE_UP);
+			robot.keyRelease(KeyEvent.VK_PAGE_UP);
+			
 //
 //			// Vänta på att varukorgsknappen dyker upp
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@class='basket active']")));
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@class='basket active']")));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(.//*[@class='basket active'])[1]")));
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//*[@class='basket active'])[1]")));
 			Thread.sleep(500);
 //
 //			// Klicka på varukorgsknappen
@@ -213,10 +228,15 @@ public class TestCart {
 					.getText();
 			System.out.println(productName);
 			driver.findElement(By.xpath(".//*[@id='giftfinder-container']/div/div/div/ul/li[1]/div/a")).click();
+			
+			Thread.sleep(1000);
+			robot.keyPress(KeyEvent.VK_PAGE_UP);
+			robot.keyRelease(KeyEvent.VK_PAGE_UP);
+			
 //
 //			// Vänta på att varukorgsknappen dyker upp
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@class='basket active']")));
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@class='basket active']")));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(.//*[@class='basket active'])[1]")));
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//*[@class='basket active'])[1]")));
 			Thread.sleep(500);
 //
 //			// Klicka på varukorgsknappen
@@ -295,10 +315,14 @@ public class TestCart {
 					.getText();
 			System.out.println(secondProductName);
 			driver.findElement(By.xpath(".//*[@id='giftfinder-container']/div/div/div/ul/li[2]/div/a")).click();
-//
-//			// Vänta på att varukorgsknappen dyker upp
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@class='basket active']")));
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@class='basket active']")));
+
+			Thread.sleep(1000);
+			robot.keyPress(KeyEvent.VK_PAGE_UP);
+			robot.keyRelease(KeyEvent.VK_PAGE_UP);
+			
+			// Vänta på att varukorgsknappen dyker upp
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(.//*[@class='basket active'])[1]")));
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//*[@class='basket active'])[1]")));
 			Thread.sleep(500);
 //
 //			// Klicka på varukorgsknappen
