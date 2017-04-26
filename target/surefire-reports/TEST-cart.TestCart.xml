@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="cart.TestCart" time="0.013" errors="0" skipped="0">
+<testsuite tests="4" failures="1" name="cart.TestCart" time="104.176" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_51\jre\bin"/>
-    <property name="java.vm.version" value="25.51-b03"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_101\jre\bin"/>
+    <property name="java.vm.version" value="25.101-b13"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Admin\Desktop\Testauto\Selenium\projekt\Br-Projekt-Chen-2"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\dansj\Desktop\Test Workspace\Grupparbete\BR-Project-Chen-2\BR-Projekt-Chen-2"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,44 +16,44 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Admin\Desktop\Testauto\Selenium\projekt\Br-Projekt-Chen-2"/>
-    <property name="java.runtime.version" value="1.8.0_51-b16"/>
+    <property name="user.dir" value="C:\Users\dansj\Desktop\Test Workspace\Grupparbete\BR-Project-Chen-2\BR-Projekt-Chen-2"/>
+    <property name="java.runtime.version" value="1.8.0_101-b13"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_51\jre\lib\endorsed"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_101\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\Admin\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\dansj\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
-    <property name="os.name" value="Windows 8.1"/>
-    <property name="classworlds.conf" value="C:\Users\Admin\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3887405236474778330.tmp"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Users\dansj\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5991813700206281089.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_51\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_51/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_51/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_51/bin/../jre/lib/amd64;C:\PROGRAM FILES\BROADCOM\BROADCOM 802.11;C:\PROGRAM FILES (X86)\INTEL\ICLS CLIENT\;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\OPENCL SDK\2.0\BIN\X86;C:\PROGRAM FILES (X86)\INTEL\OPENCL SDK\2.0\BIN\X64;C:\PROGRAM FILES (X86)\COMMON FILES\ROXIO SHARED\DLLSHARED\;C:\PROGRAM FILES (X86)\COMMON FILES\ROXIO SHARED\OEM\DLLSHARED\;C:\PROGRAM FILES (X86)\COMMON FILES\ROXIO SHARED\OEM\12.0\DLLSHARED\;C:\PROGRAM FILES (X86)\ROXIO\OEM\AUDIOCORE\;C:\PROGRAM FILES (X86)\HEWLETT-PACKARD\HP PROTECTTOOLS SECURITY MANAGER\BIN\;C:\PROGRAM FILES (X86)\QUICKTIME\QTSYSTEM\;c:\Program Files\WIDCOMM\Bluetooth Software\;c:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Java\jdk1.8.0_51\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files (x86)\Skype\Phone\;%JAVA_HOME%;C:\Program Files\apache-maven-3.3.9\bin;C:\Program Files\Git\cmd;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;;C:\Users\Admin\Desktop;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_101\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_121/bin/server;C:/Program Files/Java/jre1.8.0_121/bin;C:/Program Files/Java/jre1.8.0_121/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Skype\Phone\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\apache-maven-3.3.9\bin;C:\Program Files\Java\jdk1.8.0_101\bin;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;C:\Users\dansj\Desktop;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="6.3"/>
-    <property name="user.home" value="C:\Users\Admin"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\dansj"/>
     <property name="user.timezone" value="Europe/Berlin"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="Cp1252"/>
-    <property name="user.name" value="Admin"/>
-    <property name="java.class.path" value="/C:/Users/Admin/eclipse/java-neon/eclipse/../../../.p2/pool/plugins/org.eclipse.m2e.maven.runtime_1.7.0.20160603-1931/jars/plexus-classworlds-2.5.2.jar"/>
+    <property name="user.name" value="dansj"/>
+    <property name="java.class.path" value="C:\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_51\jre"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_101\jre"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="sv"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_51"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_51\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_51\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_51\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_51\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_51\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_51\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_51\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_51\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_51\jre\classes"/>
+    <property name="java.version" value="1.8.0_101"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_101\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_101\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Users\Admin\Desktop\Testauto\Selenium\projekt\Br-Projekt-Chen-2\EMBEDDED"/>
+    <property name="maven.home" value="C:\apache-maven-3.3.9"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,41 +61,69 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="cart.TestCart" name="test" time="0.013">
-    <failure message="Not yet implemented" type="java.lang.AssertionError">java.lang.AssertionError: Not yet implemented
+  <testcase classname="cart.TestCart" name="testVerifyPriceInCartWithMultipleProducts" time="20.669"/>
+  <testcase classname="cart.TestCart" name="testIncreaseQuantityAndVerifyResult" time="35.969">
+    <failure message="Cannot find element!" type="java.lang.AssertionError">java.lang.AssertionError: Cannot find element!
 	at org.junit.Assert.fail(Assert.java:88)
-	at cart.TestCart.test(TestCart.java:21)
+	at cart.TestCart.testIncreaseQuantityAndVerifyResult(TestCart.java:181)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
 	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
 	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
+    <system-out>GEOMAG Kor 2.0 blätt konstruktionsset
+</system-out>
+    <system-err>1493124808379	geckodriver	INFO	Listening on 127.0.0.1:17194
+1493124808941	geckodriver::marionette	INFO	Starting browser \\?\C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args [&quot;-marionette&quot;]
+1493124809153	addonJavaScript error: resource://gre/modules/AddonManager.jsms.manager	ERROR	startup failed: [Exception... &quot;Component returned fai, line 1657: NS_ERROR_NOT_INITIALIZED: AddonManager is not initialized
+lure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIFile.create]&quot;  nsresult: &quot;0x80070057 (NS_ERROR_ILLEGAL_VALUE)&quot;  location: &quot;JS frame :: resource://gre/modules/FileUtils.jsm :: FileUtils_getDir :: line 70&quot;  data: no] Stack trace: FileUtils_getDir()@resource://gre/modules/FileUtils.jsm:70 &lt; FileUtils_getFile()@resource://gre/modules/FileUtils.jsm:42 &lt; validateBlocklist()@resource://gre/modules/AddonManager.jsm:671 &lt; startup()@resource://gre/modules/AddonManager.jsm:834 &lt; startup()@resource://gre/modules/AddonManager.jsm:3129 &lt; observe()@resource://gre/components/addonManager.js:65
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0
+1493124813354	Marionette	INFO	Listening on port 64872
+JavaScript error: resource://gre/modules/AddonManager.jsm, line 2570: NS_ERROR_NOT_INITIALIZED: AddonManager is not initialized
+apr 25, 2017 2:53:34 EM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+JavaScript error: resource://gre/modules/FileUtils.jsm, line 70: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIFile.create]
+apr 25, 2017 2:54:03 EM cart.TestCart testIncreaseQuantityAndVerifyResult
+INFO: Unable to locate element: .//*[@id=&apos;b_quantity_1&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;DESKTOP-SJO0L42&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\dansj\AppData\Local\Temp\rust_mozprofile.LEaX1kpkhp8y, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=53.0, platformVersion=10.0, moz:processID=5808.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: cf5ec750-bff5-4364-adf5-7205156118d7
+*** Element info: {Using=xpath, value=.//*[@id=&apos;b_quantity_1&apos;]}
+1493124843873	Marionette	INFO	New connections will no longer be accepted
+</system-err>
   </testcase>
+  <testcase classname="cart.TestCart" name="testAddProductToCart" time="28.128"/>
+  <testcase classname="cart.TestCart" name="testDecreaseQuantityAndVerifyResult" time="19.41"/>
 </testsuite>

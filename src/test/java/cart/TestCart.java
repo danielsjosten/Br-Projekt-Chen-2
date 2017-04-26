@@ -16,7 +16,9 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -71,6 +73,7 @@ public class TestCart {
 
 	@AfterClass
 	public static void tearDownAfterClass() {
+		log.info("All tests finished!");
 		fh.close();
 	}
 
@@ -87,9 +90,10 @@ public class TestCart {
 
 
 			String productName = driver
-					.findElement(By.xpath(".//*[@id='giftfinder-container']/div/div/div/ul/li[1]/div/div/a/div[3]/span"))
+					.findElement(By.xpath(".//*[@class='product-list-container']/li[1]/div/div/a/div[4]/span"))
 					.getText();
 			System.out.println(productName);
+			//Klicka på lägg i varukorg
 			driver.findElement(By.xpath(".//*[@id='giftfinder-container']/div/div/div/ul/li[1]/div/a")).click();
 //
 //			// Vänta på att varukorgsknappen dyker upp
@@ -143,7 +147,7 @@ public class TestCart {
 
 
 			String productName = driver
-					.findElement(By.xpath(".//*[@id='giftfinder-container']/div/div/div/ul/li[1]/div/div/a/div[3]/span"))
+					.findElement(By.xpath(".//*[@class='product-list-container']/li[1]/div/div/a/div[4]/span"))
 					.getText();
 			System.out.println(productName);
 			driver.findElement(By.xpath(".//*[@id='giftfinder-container']/div/div/div/ul/li[1]/div/a")).click();
@@ -205,7 +209,7 @@ public class TestCart {
 
 
 			String productName = driver
-					.findElement(By.xpath(".//*[@id='giftfinder-container']/div/div/div/ul/li[1]/div/div/a/div[3]/span"))
+					.findElement(By.xpath(".//*[@class='product-list-container']/li[1]/div/div/a/div[4]/span"))
 					.getText();
 			System.out.println(productName);
 			driver.findElement(By.xpath(".//*[@id='giftfinder-container']/div/div/div/ul/li[1]/div/a")).click();
@@ -264,6 +268,7 @@ public class TestCart {
 		}
 	}
 
+
 	@Test
 	public void testVerifyPriceInCartWithMultipleProducts() throws InterruptedException {
 		try {
@@ -279,14 +284,14 @@ public class TestCart {
 
 
 			String firstProductName = driver
-					.findElement(By.xpath(".//*[@id='giftfinder-container']/div/div/div/ul/li[1]/div/div/a/div[3]/span"))
+					.findElement(By.xpath(".//*[@class='product-list-container']/li[1]/div/div/a/div[4]/span"))
 					.getText();
 			System.out.println(firstProductName);
 			driver.findElement(By.xpath(".//*[@id='giftfinder-container']/div/div/div/ul/li[1]/div/a")).click();
 
 			// Lägg in en till produkt i varukorgen
 			String secondProductName = driver
-					.findElement(By.xpath(".//*[@id='giftfinder-container']/div/div/div/ul/li[2]/div/div/a/div[3]/span"))
+					.findElement(By.xpath(".//*[@class='product-list-container']/li[2]/div/div/a/div[4]/span"))
 					.getText();
 			System.out.println(secondProductName);
 			driver.findElement(By.xpath(".//*[@id='giftfinder-container']/div/div/div/ul/li[2]/div/a")).click();
