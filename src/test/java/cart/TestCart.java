@@ -19,6 +19,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -29,7 +30,9 @@ import org.junit.Assert;
 
 import org.junit.ComparisonFailure;
 
-
+/*
+ * Tests created by Daniel
+ */
 
 public class TestCart {
 
@@ -61,7 +64,8 @@ public class TestCart {
 
 	@Before
 	public void setUp() throws Exception {
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
+		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver, 3000);
 		driver.manage().window().maximize();
 		driver.get(url);

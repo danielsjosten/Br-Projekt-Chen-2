@@ -19,6 +19,9 @@ import org.openqa.selenium.NoSuchElementException;
 
 import org.junit.Assert;
 
+/*
+ * Tests created by everyone in the group
+ */
 
 public class TestOther {
 

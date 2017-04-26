@@ -23,6 +23,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import other.TestOther;
 
+
+/*
+ * Tests created by Saer
+ */
+
+
 public class TestPayment {
 
 	private static WebDriver driver;
@@ -85,7 +91,7 @@ public class TestPayment {
 		
 		//Vänta tills en viss knapp syns sen lägg till en produkt till varukorg
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("html/body/div[8]/div[2]/div[5]/div[3]/button")));
-		driver.findElement(By.xpath("html/body/div[8]/div[2]/div[5]/div[2]/div/ul/li[1]/div/a")).click();
+		driver.findElement(By.xpath("html/body/div[8]/div[2]/div[5]/div[2]/div/ul/li[2]/div/a")).click();
 		
 		
 		//Väntar tills varukorgen finns sen klicka på den

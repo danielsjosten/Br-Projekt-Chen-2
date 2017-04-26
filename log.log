@@ -1,0 +1,9 @@
+apr 26, 2017 12:56:12 EM payment.TestPayment setUpBeforeClass
+INFO: @BeforeClass - setUpBeforeClass()
+
+apr 26, 2017 12:56:24 EM payment.TestPayment setUp
+INFO: @Before - setUp()
+
+apr 26, 2017 12:56:40 EM payment.TestPayment tearDownAfterClass
+INFO: @AfterClass - tearDownAfterClass()
+

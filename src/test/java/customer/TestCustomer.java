@@ -20,6 +20,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObject.HomePage;
 import pageObject.LoginPage;
 
+/*
+ * Tests created by Saer
+ */
 
 public class TestCustomer {
 
